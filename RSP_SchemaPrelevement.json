@@ -1,8 +1,12 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
   "title": "RSP prélèvements",
   "description": "Schéma des données recueillies à l'issue des opérations de prélèvement réalisées dans le cadre du Réseau de Surveillance Prospective",
   "countryCode": "FR",
+  "version": "0.0.1",
+  "created": "2020-04-02",
+  "updated": "2020-04-02",
+  "homepage": "",
   "contributors": [
     {
       "title": "Jean-Yves Chatelier",
@@ -10,78 +14,64 @@
       "role": "author"
     }
   ],
-  "version": "0.0.1",
-  "created": "2020-04-02",
-  "updated": "2020-04-02",
-  "homepage": "",
-  "uri": "",
-  "type": "object",
-  "required": [
-    "type",
-    "features"
-  ],
-  "properties": {
-    "type": {
-      "enum": [
-        "FeatureCollection"
+  "fields": [
+    {
+      "name": "situation",
+      "type": "string",
+      "title": "Situation géographique",
+      "description": "Indique si le point de prélèvement est en métropole ou dans les DOM",
+	  "constraints" : {
+	    "required" : true,
+        "enum": [
+          "METROPOLE",
+          "DOM"
+        ]
+      },
+      "examples": [
+        "METROPOLE"
       ]
     },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/feature"
-      }
+    {
+      "name" : "siret",
+      "type": "string",
+      "title": "Identification SIRET de l'agence",
+      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du maître d'ouvrage Agence de l'eau",
+	  "constraints" : {
+	    "required" : true,
+		"unique" : true,
+        "pattern": "^[0-9]{14}$"
+      },
+      "examples": [
+        "79889944900036"
+      ]
+    },
+	{
+      "name" : "accronyme",
+      "type": "string",
+      "title": "Accronyme",
+      "description": "accronyme de l'agence de l'eau correspondant au n° SIRET",
+	  "constraints" : {
+	    "required" : true,
+        "enum": [
+          "AEAG",
+          "AELB",
+          "AERMC",
+          "OERE",
+          "OEMA"
+        ]
+      },
+      "examples": [
+         "AEAG"
+      ]
+    },
+	{
+      "name" : "date_prel",
+      "type": "date",
+      "title": "Date Prélèvement",
+      "description": "Date de prélèvement format AAAA-MM-JJ, suivant la norme internationale [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601).",
+      "examples": [
+        "2019-06-25"
+      ]
     }
-  },
-  "definitions": {
-    "properties": {
-      "properties": {
-        "situation": {
-          "type": "string",
-          "title": "Situation géographique",
-          "description": "Indique si le point de prélèvement est en métropole ou dans les DOM",
-          "enum": [
-            "METROPOLE",
-            "DOM"
-          ],
-          "examples": [
-            "METROPOLE"
-          ]
-        },
-        "siret": {
-          "type": "string",
-          "title": "Identification SIRET de l'agence",
-          "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du maître d'ouvrage Agence de l'eau",
-          "pattern": "^[0-9]{14}$",
-          "examples": [
-            "79889944900036"
-          ]
-        },
-        "accronyme": {
-          "type": "string",
-          "title": "Accronyme",
-          "description": "accronyme de l'agence de l'eau correspondant au n° SIRET",
-          "enum": [
-            "AEAG",
-            "AELB",
-            "AERMC",
-            "OERE",
-            "OEMA"
-          ],
-          "examples": [
-            "AEAG"
-          ]
-        },
-        "date_prel": {
-          "type": "string",
-          "format": "date",
-          "title": "Date Prélèvement",
-          "description": "Date de prélèvement format AAAA-MM-JJ, suivant la norme internationale [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601).",
-          "examples": [
-            "2019-06-25"
-          ]
-        },
-      }
-    }
-  }
+  ]
 }
