@@ -1,11 +1,12 @@
 {
+  "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
   "title": "RSP prélèvements",
   "description": "Schéma des données recueillies à l'issue des opérations de prélèvement réalisées dans le cadre du Réseau de Surveillance Prospective",
   "countryCode": "FR",
   "version": "0.0.1",
   "created": "2020-04-02",
   "updated": "2020-04-02",
-  "homepage": "",
+  "homepage": "http://dse.prive.ineris.fr/content/produire-des-donn%C3%A9es",
   "contributors": [
     {
       "title": "Jean-Yves Chatelier",
