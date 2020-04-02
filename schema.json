@@ -1,5 +1,4 @@
 {
-  "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
   "title": "RSP prélèvements",
   "description": "Schéma des données recueillies à l'issue des opérations de prélèvement réalisées dans le cadre du Réseau de Surveillance Prospective",
   "countryCode": "FR",
