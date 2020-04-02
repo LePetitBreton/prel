@@ -63,10 +63,10 @@
           "description": "accronyme de l'agence de l'eau correspondant au n° SIRET",
           "enum": [
             "AEAG",
-			"AELB",
-			"AERMC",
+            "AELB",
+            "AERMC",
             "OERE",
-			"OEMA"
+            "OEMA"
           ],
           "examples": [
             "AEAG"
