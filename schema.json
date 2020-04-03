@@ -73,6 +73,16 @@
       "examples": [
         "2019-06-25"
       ]
+    },
+	{
+      "name" : "contact",
+      "type": "string",
+	  "format": "mail",
+      "title": "Mail contact",
+      "description": "Mail du point de contact pour ce prélèvement",
+      "examples": [
+        "preleveur@societe.org"
+      ]
     }
   ]
 }
