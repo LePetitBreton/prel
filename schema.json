@@ -77,7 +77,7 @@
 	{
       "name" : "contact",
       "type": "string",
-	  "format": "mail",
+	  "format": "email",
       "title": "Mail contact",
       "description": "Mail du point de contact pour ce prélèvement",
       "examples": [
