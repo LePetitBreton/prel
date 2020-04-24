@@ -5,3 +5,7 @@ files:
     
   - source: RSP_SchemaPrelevementAvecErreurs.csv
     schema: RSP_SchemaPrelevement.json
+
+  - source: RSP_SchemaPrelevement.xlsx
+    schema: RSP_SchemaPrelevement.json
+    sheet: 2
