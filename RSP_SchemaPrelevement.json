@@ -84,15 +84,5 @@
         "preleveur@societe.org"
       ]
     }
-	{
-      "name" : "point",
-      "type": "geopoint",
-	  "format": "default",
-      "title": "Point de prélèvement",
-      "description": "Coordonnées du point de prélèvement lon,lat ",
-      "examples": [
-        "90,45"
-      ]
-    }
   ]
 }
