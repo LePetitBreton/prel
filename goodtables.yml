@@ -1,14 +1,13 @@
 # The goodtables.yml
 
+```yaml
 files:
-    source: RSP_SchemaPrelevementSansErreur.csv
+  - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
     format: csv
-    encoding: utf-8
     delimiter: ';'
 
-    source: RSP_SchemaPrelevementAvecErreurs.csv
+  - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
     format: csv
-    encoding: utf-8
     delimiter: ';'
