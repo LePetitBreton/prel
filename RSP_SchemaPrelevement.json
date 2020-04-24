@@ -1,0 +1,98 @@
+{
+  "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+  "title": "RSP prélèvements",
+  "description": "Schéma des données recueillies à l'issue des opérations de prélèvement réalisées dans le cadre du Réseau de Surveillance Prospective",
+  "countryCode": "FR",
+  "version": "0.0.1",
+  "created": "2020-04-02",
+  "updated": "2020-04-02",
+  "homepage": "http://dse.prive.ineris.fr/content/produire-des-donn%C3%A9es",
+  "example": "http://dse.prive.ineris.fr/sites/default/files/RSP_SchemaPrelevementSansErreur.csv",
+  "contributors": [
+    {
+      "title": "Jean-Yves Chatelier",
+      "email": "jean-yves.chatelier@ineris.fr",
+      "role": "author"
+    }
+  ],
+  "fields": [
+    {
+      "name": "situation",
+      "type": "string",
+      "title": "Situation géographique",
+      "description": "Indique si le point de prélèvement est en métropole ou dans les DOM",
+	  "constraints" : {
+	    "required" : true,
+        "enum": [
+          "METROPOLE",
+          "DOM"
+        ]
+      },
+      "examples": [
+        "METROPOLE"
+      ]
+    },
+    {
+      "name" : "siret",
+      "type": "string",
+      "title": "Identification SIRET de l'agence",
+      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du maître d'ouvrage Agence de l'eau",
+	  "constraints" : {
+	    "required" : true,
+		"unique" : true,
+        "pattern": "^[0-9]{14}$"
+      },
+      "examples": [
+        "79889944900036"
+      ]
+    },
+	{
+      "name" : "accronyme",
+      "type": "string",
+      "title": "Accronyme",
+      "description": "accronyme de l'agence de l'eau correspondant au n° SIRET",
+	  "constraints" : {
+	    "required" : true,
+        "enum": [
+          "AEAG",
+          "AELB",
+          "AERMC",
+          "OERE",
+          "OEMA"
+        ]
+      },
+      "examples": [
+         "AEAG"
+      ]
+    },
+	{
+      "name" : "date_prel",
+      "type": "date",
+      "title": "Date Prélèvement",
+      "description": "Date de prélèvement format AAAA-MM-JJ, suivant la norme internationale [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601).",
+      "examples": [
+        "2019-06-25"
+      ]
+    },
+	{
+      "name" : "contact",
+      "type": "string",
+	  "format": "email",
+      "title": "Mail contact",
+      "description": "Mail du point de contact pour ce prélèvement",
+      "examples": [
+        "preleveur@societe.org"
+      ]
+    }
+	{
+      "name" : "point",
+      "type": "geopoint",
+	  "format": "default",
+      "title": "Point de prélèvement",
+      "description": "Coordonnées du point de prélèvement lon,lat ",
+      "examples": [
+        "90,45"
+      ]
+    }
+  ]
+}
