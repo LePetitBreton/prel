@@ -87,11 +87,11 @@
     {
       "name" : "point",
       "type": "geopoint",
-      "format": "object",
+      "format": "default",
       "title": "Point de prélèvement",
       "description": "Coordonnées du point de prélèvement lon,lat ",
       "examples": [
-        {"lon": 90, "lat": 45}
+        "90,45"
       ]
     }
   ]
