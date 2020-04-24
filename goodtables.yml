@@ -1,7 +1,4 @@
 # The goodtables.yml
 files:
-    source: RSP_SchemaPrelevementSansErreur.csv
-    schema: RSP_SchemaPrelevement.json
-    
-    source: RSP_SchemaPrelevementSansErreur.csv
+  - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
