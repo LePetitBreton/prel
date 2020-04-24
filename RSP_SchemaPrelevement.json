@@ -91,7 +91,7 @@
       "title": "Point de prélèvement",
       "description": "Coordonnées du point de prélèvement lon,lat ",
       "examples": [
-        "{"lon": 90, "lat": 45}"
+        {"lon": 90, "lat": 45}
       ]
     }
   ]
