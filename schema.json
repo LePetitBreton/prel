@@ -84,7 +84,7 @@
         "preleveur@societe.org"
       ]
     },
-	{
+    {
       "name" : "point",
       "type": "geopoint",
 	  "format": "default",
