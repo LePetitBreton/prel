@@ -3,5 +3,5 @@ files:
   - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
     
-  - source: RSP_SchemaPrelevementAvecErreur.csv
+  - source: RSP_SchemaPrelevementAvecErreurs.csv
     schema: RSP_SchemaPrelevement.json
