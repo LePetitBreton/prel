@@ -2,10 +2,6 @@
 files:
   - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
-    format: csv
-    delimiter: ';'
 
   - source: RSP_SchemaPrelevementSansErreur.csv
     schema: RSP_SchemaPrelevement.json
-    format: csv
-    delimiter: ';'
